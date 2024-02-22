@@ -9,7 +9,6 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '.
 import { Pagination } from './components/pagination';
 import { keepPreviousData, useQuery } from '@tanstack/react-query'
 import { useSearchParams } from 'react-router-dom';
-import useDebounceValue from './hooks/use-debounce-value';
 
 export interface TagResponse {
   first: number
@@ -84,7 +83,7 @@ export function App() {
        </div>
 
        <div className="flex items-center justify-between">
-        <div className="flex items-center">
+        <div className="flex items-center gap-3">
           <Input variant="filter">
             <Search className="size-3"/>
             <Control 
